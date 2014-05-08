@@ -21,12 +21,13 @@ module.exports = function (dir) {
           if (rule.value.indexOf(value) !== -1) {
             var dimension = rule.value.replace(RE, "$1");
             var filename = rule.value.replace(RE, "$3");
+            var hidpiFactor = filename.match(/@2x/) ? 2 : 1;
             var size = getImageSize(dir, filename);
             if (size) {
               if (dimension === "dimensions") {
-                rule.value = size["width"] + "px " + size["height"] + "px"
+                rule.value = size["width"] / hidpiFactor + "px " + size["height"] / hidpiFactor + "px"
               } else {
-                rule.value = size[dimension] + "px"
+                rule.value = size[dimension] / hidpiFactor + "px"
               }
             } else {
               throw new Error(

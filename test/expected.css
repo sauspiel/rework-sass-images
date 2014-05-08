@@ -10,3 +10,15 @@ p {
   top: 518px;
 }
 
+h1 {
+  background: url("options@2x.png");
+  background-size: 32px 32px;
+}
+
+p {
+  background: url("options@2x.png");
+  width: 32px;
+  height: 32px;
+  top: 32px;
+}
+

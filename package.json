@@ -1,0 +1,33 @@
+{
+  "name": "rework-sass-images",
+  "version": "0.1.0",
+  "description": "Sass/Compass image size functions written in JavaScript as a Rework plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -u tdd -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saulabs/rework-sass-images.git"
+  },
+  "keywords": [
+    "rework",
+    "image",
+    "size",
+    "css",
+    "sass",
+    "compass"
+  ],
+  "author": "Andrey Okonetchnikov <andrey@okonet.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saulabs/rework-sass-images/issues"
+  },
+  "dependencies": {
+    "imagesize": "^1.0.0",
+    "rework-visit": "^1.0.0"
+  },
+  "devDependencies": {
+    "rework": "^0.20.2"
+  }
+}

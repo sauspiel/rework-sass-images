@@ -1,0 +1,12 @@
+h1 {
+  background: url("npm.png");
+  background-size: image-dimensions("npm.png");
+}
+
+p {
+  background: url("npm.png");
+  width: image-width("npm.png");
+  height: image-height("npm.png");
+  top: image-width("npm.png");
+}
+

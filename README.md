@@ -32,12 +32,18 @@ Will produce this CSS:
 ```css
 h1 {
   background: url('myimage.png');
-  text-indent: 100%;
   background-size: 518px 202px;
   width: 518px;
   height: 202px;
+  text-indent: 100%;
 }
 ```
+
+## Functions
+
+* `image-width('path/to/image')` -- inserts the width of the image in px;
+* `image-height('path/to/image')` -- inserts the height of the image in px;
+* `image-dimensions('path/to/image')` -- inserts the width AND the height of the image separated by white-space;
 
 ## License
 

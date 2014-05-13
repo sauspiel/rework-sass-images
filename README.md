@@ -59,6 +59,7 @@ div {
   width: 320px;
   height: 240px;
 }
+```
 
 ## Functions
 

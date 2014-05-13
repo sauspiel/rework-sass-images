@@ -1,6 +1,6 @@
 {
   "name": "rework-sass-images",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Sass/Compass image size functions written in JavaScript as a Rework plugin",
   "main": "index.js",
   "scripts": {

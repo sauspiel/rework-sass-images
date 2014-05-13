@@ -12,6 +12,18 @@ p {
 
 h1 {
   background: url("options@2x.png");
+  background-size: 64px 64px;
+}
+
+p {
+  background: url("options@2x.png");
+  width: 64px;
+  height: 64px;
+  top: 64px;
+}
+
+h1 {
+  background: url("options@2x.png");
   background-size: 32px 32px;
 }
 

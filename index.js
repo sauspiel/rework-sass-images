@@ -10,8 +10,8 @@ var visit     = require('rework-visit');
 var fs        = require('fs');
 var path      = require('path');
 
-var VALUES  = ['image-width', 'image-height', 'image-dimensions'];
-var RE = new RegExp(/image-(width|height|dimensions)\(("|')(.+)("|')\)/);
+var VALUES  = ['image-width', 'image-height', 'image-size', 'hidpi-image-width', 'hidpi-image-height', 'hidpi-image-size'];
+var RE = new RegExp(/(hidpi-)?image-(width|height|size)\(("|')(.+)("|')\)/);
 
 module.exports = function (dir) {
   return function (stylesheet) {
@@ -19,12 +19,12 @@ module.exports = function (dir) {
       declarations.forEach(function (rule, index, arr) {
         VALUES.forEach(function(value){
           if (rule.value.indexOf(value) !== -1) {
-            var dimension = rule.value.replace(RE, "$1");
-            var filename = rule.value.replace(RE, "$3");
-            var hidpiFactor = filename.match(/@2x/) ? 2 : 1;
+            var dimension = rule.value.replace(RE, "$2");
+            var filename = rule.value.replace(RE, "$4");
+            var hidpiFactor = rule.value.replace(RE, "$1") && filename.match(/@2x/) ? 2 : 1;
             var size = getImageSize(dir, filename);
             if (size) {
-              if (dimension === "dimensions") {
+              if (dimension === "size") {
                 rule.value = size["width"] / hidpiFactor + "px " + size["height"] / hidpiFactor + "px"
               } else {
                 rule.value = size[dimension] / hidpiFactor + "px"

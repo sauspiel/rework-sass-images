@@ -1,6 +1,6 @@
 h1 {
   background: url("npm.png");
-  background-size: image-dimensions("npm.png");
+  background-size: image-size("npm.png");
 }
 
 p {
@@ -12,7 +12,7 @@ p {
 
 h1 {
   background: url("options@2x.png");
-  background-size: image-dimensions("options@2x.png");
+  background-size: image-size("options@2x.png");
 }
 
 p {
@@ -20,5 +20,17 @@ p {
   width: image-width("options@2x.png");
   height: image-height("options@2x.png");
   top: image-width("options@2x.png");
+}
+
+h1 {
+  background: url("options@2x.png");
+  background-size: hidpi-image-size("options@2x.png");
+}
+
+p {
+  background: url("options@2x.png");
+  width: hidpi-image-width("options@2x.png");
+  height: hidpi-image-height("options@2x.png");
+  top: hidpi-image-width("options@2x.png");
 }
 

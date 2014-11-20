@@ -18,7 +18,7 @@ module.exports = function (dir) {
     visit(stylesheet, function (declarations, rule) {
       declarations.forEach(function (rule, index, arr) {
         VALUES.forEach(function(value){
-          if (rule.value.indexOf(value) !== -1) {
+          if (rule.value && rule.value.indexOf(value) !== -1) {
             var dimension = rule.value.replace(RE, "$2");
             var filename = rule.value.replace(RE, "$4");
             var hidpiFactor = rule.value.replace(RE, "$1") && filename.match(/@2x/) ? 2 : 1;

@@ -40,7 +40,8 @@ h1 {
 }
 
 p {
-  background: url("options@2x.png");
+  /* comment */
+  /*background: url("options@2x.png");*/
   width: 32px;
   height: 32px;
   top: 32px;

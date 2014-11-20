@@ -40,7 +40,8 @@ h1 {
 }
 
 p {
-  background: url("options@2x.png");
+  /* comment */
+  /*background: url("options@2x.png");*/
   width: hidpi-image-width("options@2x.png");
   height: hidpi-image-height("options@2x.png");
   top: hidpi-image-width("options@2x.png");

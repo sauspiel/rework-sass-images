@@ -25,10 +25,10 @@
   },
   "dependencies": {
     "imagesize": "^1.0.0",
+    "rework": "^1.0.1",
     "rework-visit": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.0.1",
-    "rework": "^0.20.2"
+    "mocha": "^2.0.1"
   }
 }
